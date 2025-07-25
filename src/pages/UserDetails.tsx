@@ -26,7 +26,7 @@ const BackLink = styled(Link)`
 `;
 
 const UserDetails: React.FC = () => {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
   const userId = Number(id);
 
   const { data: user, isLoading, isError } = useQuery({
